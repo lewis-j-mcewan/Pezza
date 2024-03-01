@@ -4,8 +4,8 @@ using static DatabaseContextFactory;
 
 public class QueryTestBase : IDisposable
 {
-	public DatabaseContext Context => Create();
+	protected static DatabaseContext Context => Create();
 
-	public void Dispose() => Destroy(this.Context);
+	public void Dispose() => Destroy(Context);
 }
 
